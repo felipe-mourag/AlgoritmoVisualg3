@@ -1,0 +1,22 @@
+ algoritmo "MédiaeDesvioPadrão"
+var
+ notas : vetor[1..4] de inteiro
+ Raiz : vetor [1..4] de real
+ I,SN : inteiro
+ DP,SR,M : real
+inicio
+  para I <- 1 ate 4 faca
+     escreval("Digite a ",i, "o nota: ")
+     leia(notas[i])
+     SN <- SN + notas[i]
+  fimpara
+  M <- SN/4
+  para I <- 1 ate 4 faca
+     raiz[i] <- ((notas[i]-M)^2))
+     SR <- raiz[i]+ SR
+  fimpara
+    SR <- SR/4
+    DP <- raizq(SR)
+    escreval(" A média das turmas foi de: ",M)
+    escreva(" O desvio padrão foi de: ",DP)
+fimalgoritmo

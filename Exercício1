@@ -1,0 +1,28 @@
+algoritmo "OrdenaçãoSimples"
+var
+   I, temp: inteiro
+   Ordem: vetor[1..3] de inteiro
+inicio
+   para I <- 1 ate 3 faca
+      escreval("Digite o", I, "º número: ")
+      leia(Ordem[I])
+   fimpara
+   se (Ordem[2] < Ordem[1]) entao
+      temp <- Ordem[1]
+      Ordem[1] <- Ordem[2]
+      Ordem[2] <- temp
+   fimse
+   se (Ordem[3] < Ordem[2]) entao
+      temp <- Ordem[2]
+      Ordem[2] <- Ordem[3]
+      Ordem[3] <- temp
+   fimse
+   se (Ordem[2] < Ordem[1]) entao
+      temp <- Ordem[1]
+      Ordem[1] <- Ordem[2]
+      Ordem[2] <- temp
+   fimse
+   para I <- 1 ate 3 faca
+      escreva(Ordem[I])
+   fimpara
+fimalgoritmo

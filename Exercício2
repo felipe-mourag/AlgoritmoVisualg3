@@ -1,0 +1,18 @@
+algoritmo "BuscadordeVetores"
+var
+  n: vetor[1..4] de inteiro
+  G,I,posicao: inteiro
+inicio
+    para I <- 1 ate 4 faça
+      escreval("Digite o ",I," valor: ")
+      leia(n[I])
+    fimpara
+    escreval("Digite um valor: ")
+    leia(G)
+   para I <- 1 ate 4 faca
+      se ( G = n[I] ) entao
+         posicao <- I
+      fimse
+   fimpara
+  escreval("O valor de ",G," está na posição: ",posicao)
+fimalgoritmo
