@@ -1,0 +1,29 @@
+algoritmo "MatrizTransposta"
+var
+  m: vetor[1..2,1..2] de inteiro
+  l,c : inteiro
+inicio
+   para c <- 1 ate 2 faca
+     para l <- 1 ate 2 faca
+       escreval("Digite o valor das posições da matriz: ")
+         leia(m[c,l])
+     fimpara
+   fimpara
+   limpatela
+    escreval("=================")
+    escreval("   MATRIZ  ")
+   para c <- 1 ate 2 faca
+      para l <- 1 ate 2 faca
+         escreva(m[c,l])
+      fimpara
+      escreval()
+   fimpara
+   escreval("======================")
+   escreval("    MATRIZ TRANSPOSTA   ")
+   para c <- 1 ate 2 faca
+     para l <- 1 ate 2 faca
+         escreva(m[l,c])
+     fimpara
+     escreval()
+   fimpara
+fimalgoritmo

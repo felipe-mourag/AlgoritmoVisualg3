@@ -1,0 +1,28 @@
+Algoritmo "ConversorRomanoParaArabico"
+
+Var
+   romano: Caractere
+   i, valorAtual: Inteiro
+Inicio
+   Escreval("Digite um numero romano para converter:")
+   Leia(romano)
+   Para i de Compr(romano) ate 1 passo -1 faca
+      Escolha romano
+         Caso "I"
+            valorAtual <- 1
+         Caso "V"
+            valorAtual <- 5
+         Caso "X"
+            valorAtual <- 10
+         Caso "L"
+            valorAtual <- 50
+         Caso "C"
+            valorAtual <- 100
+         Caso "D"
+            valorAtual <- 500
+         Caso "M"
+            valorAtual <- 1000
+      FimEscolha
+   FimPara
+   Escreval("O número arabico correspondente e:", valoratual)
+Fimalgoritmo
