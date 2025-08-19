@@ -1,0 +1,36 @@
+Algoritmo "RotacionarVetor"
+Var
+   vetorOriginal: vetor[1..10] de inteiro
+   vetorTemp: vetor[1..10] de inteiro
+   tamanhoVetor: inteiro
+   nRotacoes: inteiro
+   i, j: inteiro
+Inicio
+   tamanhoVetor <- 10
+   escreval("--- Preencha o vetor (10 posições) ---")
+   para i de 1 ate tamanhoVetor faca
+      escreva("Digite o valor para a posição ", i, ": ")
+      leia(vetorOriginal[i])
+   fimpara
+   escreval()
+   escreva("Quantas posições deseja rotacionar para a direita? ")
+   leia(nRotacoes)
+  nRotacoes <- nRotacoes mod tamanhoVetor
+   j <- 1
+   para i de (tamanhoVetor-nRotacoes + 1) ate tamanhoVetor faca
+      vetorTemp[j] <- vetorOriginal[i]
+      j <- j + 1
+   fimpara
+   para i de (tamanhoVetor - nRotacoes) ate 1 passo -1 faca
+      vetorOriginal[i + nRotacoes] <- vetorOriginal[i]
+   fimpara
+   para i de 1 ate nRotacoes faca
+      vetorOriginal[i] <- vetorTemp[i]
+   fimpara
+   escreval()
+   escreval("Vetor após a rotação:")
+   para i de 1 ate tamanhoVetor faca
+      escreva(vetorOriginal[i], " ")
+   fimpara
+   escreval()
+Fimalgoritmo

@@ -1,0 +1,47 @@
+algoritmo "UniãoeInterseçãodeMatrizes"
+var
+  intersecao: vetor[1..3,1..3] de inteiro
+  uniao: vetor[1..3,1..3] de inteiro
+  m : vetor[1..3,1..3] de inteiro
+  m2 : vetor[1..3,1..3] de inteiro
+  l, c : inteiro
+inicio
+  para c <- 1 ate 3 faca
+    para l <- 1 ate 3 faca
+       escreval("Digite o valor da posição ",l,c," da matriz1 : ")
+       leia(m[c,l])
+       escreval("Digite o valor da posição ",l,c," da matriz2 : ")
+       leia(m2[c,l])
+    fimpara
+  fimpara
+  para c <- 1 ate 3 faça
+    para l <- 1 ate 3 faca
+       uniao[c,l] <- m[c,l]+m2[c,l]
+    fimpara
+  fimpara
+  escreval("UNIÃO DE MATRIZES")
+  escreval("=================")
+  escreval()
+  para c <- 1 ate 3 faca
+      para l <- 1 ate 3 faca
+        escreva(uniao[c,l]:5)
+      fimpara
+        escreval()
+  fimpara
+  escreval()
+  escreval()
+  para c <- 1 ate 3 faça
+    para l <- 1 ate 3 faca
+       intersecao[c,l] <- m[c,l]-m2[c,l]
+    fimpara
+  fimpara
+  escreval("INTERSEÇÃO DE MATRIZES")
+  escreval("=================")
+  escreval()
+  para c <- 1 ate 3 faca
+      para l <- 1 ate 3 faca
+        escreva(intersecao[c,l]:5)
+      fimpara
+        escreval()
+  fimpara
+fimalgoritmo
